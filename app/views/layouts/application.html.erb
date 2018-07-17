@@ -19,6 +19,7 @@
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <%= link_to 'See All Courses', courses_path, class: 'nav-link' %>
           <li class="nav-item active">
             <%= link_to 'Home', root_path, class: 'navbar-brand' %>
           </li>
@@ -33,12 +34,7 @@
               </li>
             <% end %>
           </ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
+         
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
