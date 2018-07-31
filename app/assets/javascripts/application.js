@@ -17,3 +17,4 @@
 //= require tether
 //= rewuire bootstrap-sprockets
 //= require_tree .
+//= require jquery-ui
