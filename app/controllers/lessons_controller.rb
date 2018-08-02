@@ -21,4 +21,5 @@ class LessonsController < ApplicationController
       current_user.enrolled_in?(current_course)
         redirect_to course_path(current_course),
           alert: "You are not erolled in this course"
-end
+    end
+  end

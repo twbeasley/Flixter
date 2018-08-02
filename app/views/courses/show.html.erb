@@ -1,3 +1,19 @@
+<script>
+  //$(function() {
+    //$('sections').sortable({
+      //update: function(event, ui) {
+        //$.ajax({
+          //type: 'PUT',
+  //        url: ui.item.data('update-url'),
+   //       dataTpe: 'json',
+     //     data: {section: {row_order_postion: ui.item.index() } }
+       /// });
+   //   }
+ //   });
+//  });
+</script>
+
+
 <br />
 
 <div class="booyah-box col-10 offset-1">
@@ -46,14 +62,10 @@
   </div>
   
   <div class="col-12">
-    <% @course.sections.each do |section| %>
-    <br /><br />
-    <div class="section">
-      <h3>
-      <%= section.title %>
-      </h3>
+   <% @course.sections.rank(:row_order).each do |section| %>
+    <li data-update_url="<%= instructor_course_path(@course) %>">
+      <b><%= section.title %> </b>
       <div class="row">
-      <% section.lessons.each do |lesson| %>
       <% section.lessons.rank(:row_order).each do |lesson| %>
       <div class="col-12 col-sm-6">
         <div class="lesson text-center">
@@ -63,7 +75,6 @@
           <br />
           <%= lesson.subtitle %>
         <% end %>
-          <% end %>
         </div>
       </div>
       <% end %>
