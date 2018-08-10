@@ -23,3 +23,5 @@ class LessonsController < ApplicationController
           alert: "You are not erolled in this course"
     end
   end
+end
+  
