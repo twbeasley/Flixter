@@ -25,7 +25,8 @@ class Instructor::SectionsController < ApplicationController
   def require_authorized_for_current_section
     if current_section.course.user != current_user
       render plain: "unauthorized", status: :unauthorized
-  
+    end
+  end
   helper_method :current_course
   def current_course
     if params[:course_id]
@@ -37,7 +38,5 @@ class Instructor::SectionsController < ApplicationController
 
   def section_params
     params.require(:section).permit(:title)
-  end
-    end
   end
 end
